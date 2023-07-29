@@ -1,17 +1,12 @@
-def buble(arr):
-    n = len(arr)
-    
-    for i in range(n):
-        swapped = False
-        for j in range(0,n-i-1):
-            
-            if arr[j]>arr[j+1]:
-                arr[j],arr[j+1] = arr[j+1],arr[j]
-                swapped = True
-            if swapped == False:
-                break    
-arr=[1,6,4,3,9,4,7,3,8,5]
+def bubble_sort(numbers: List[int]) -> List[int]:
+    """
 
-buble(arr)
-
-print("Sorted array is:",arr)
+    @rtype: object
+    """
+    n = len(numbers)
+    for i in range(n - 1):
+        for j in range(n - 1 - i):
+            if numbers[j] > numbers[j + 1]:
+                numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
+    return numbers
+bubble_sort([5, 2, 7, 1, 3])
