@@ -1,16 +1,13 @@
 from turtle import Turtle, Screen
 
 t = Turtle()
-
 sc = Screen()
 
-print(sc.canvheight)
-t.shape("square")
-t.forward(500)
-t.shape("laptop")
-t.right(90)
-t.forward(500)
-t.speed(1)
+
+def move_f():
+    t.forward(10)
+
+
+sc.listen()
+sc.onkey(key="space", fun=move_f)
 sc.exitonclick()
-t.end_fill()
-t.done()
