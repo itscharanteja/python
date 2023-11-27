@@ -101,3 +101,5 @@ question_data = [
         ]
     }
 ]
+
+print(question_data[0].values())
